@@ -1,4 +1,4 @@
-# Android-Werkstatt
+# CraftAnything – Android-Werkstatt
 
 Eigene Android-Apps (Kotlin + Jetpack Compose). Dieses Repo ist so eingerichtet, dass Claude Code hier Android-Apps schreiben,
 bauen, testen und bekannte Projekte klonen/nachbauen kann. Antworte dem Nutzer auf Deutsch.

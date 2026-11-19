@@ -1,4 +1,4 @@
-# Android-Werkstatt
+# CraftAnything – Android-Werkstatt
 
 Eigene Android-Apps in Kotlin und Jetpack Compose – geschrieben, gebaut und getestet mit Claude Code. GitHub baut daraus automatisch fertige `.apk`-Dateien, so wie im Schwesterrepo `programme` die `.exe`-Dateien entstehen.
 
