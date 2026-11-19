@@ -10,7 +10,7 @@ apps/<name>/           eine Gradle-Wurzel pro App (Vorlage: scripts/new-app.sh)
 clones/                fremde Open-Source-Projekte (scripts/clone-app.sh) – gitignored
 scripts/               android-setup.sh, android-skills.sh, new-app.sh, clone-app.sh, install-craft-anything.sh
 .claude/skills/        android-app-dev, android-app-clone, android-release, craft-anything (+ offizielle Google-Skills, gitignored)
-.claude/hooks/         session-start.sh (installiert SDK, Skills, Craft Anything; siehe README zum Aktivieren)
+.claude/hooks/         session-start.sh (installiert SDK, Skills, Craft Anything; registriert in .claude/settings.json)
 .mcp.json              Craft-Anything-MCP-Server im Clean-Room-Modus
 .github/workflows/     android.yml – baut jede App und legt die APK als Artifact ab
 ```
