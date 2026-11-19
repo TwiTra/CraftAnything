@@ -44,21 +44,11 @@ Cloud-Sessions haben keine KVM, also keinen Emulator. Geprüft wird mit: `./grad
 3. Feste Version: Tag `v1.0.0` setzen → APK wird an das Release gehängt.
 4. Aufs Handy: APK herunterladen, „Unbekannte Apps installieren“ für den Browser erlauben, öffnen. (Debug-signiert, nur zum Ausprobieren. Für Play Store siehe Skill `android-release`.)
 
-## SessionStart-Hook aktivieren
+## SessionStart-Hook
 
-`.claude/hooks/session-start.sh` installiert SDK, Skills und Craft Anything beim Start jeder Cloud-Session (läuft nur dort, überspringt Fertiges, synchron). Eingeschaltet wird er in `.claude/settings.json` – das habe ich bewusst nicht ohne dein Okay angelegt:
+`.claude/hooks/session-start.sh` installiert SDK, Skills und Craft Anything beim Start jeder Cloud-Session. Er läuft nur dort (`CLAUDE_CODE_REMOTE`), überspringt Fertiges (erster Lauf ca. 22 s, danach unter 1 s) und läuft synchron: Die Session startet erst, wenn er fertig ist. Registriert ist er in `.claude/settings.json`; die Datei enthält nur diese Hook-Registrierung und keine Berechtigungsregeln.
 
-```json
-{
-  "hooks": {
-    "SessionStart": [
-      { "hooks": [ { "type": "command", "command": "$CLAUDE_PROJECT_DIR/.claude/hooks/session-start.sh" } ] }
-    ]
-  }
-}
-```
-
-Ohne Hook ruft Claude die Skripte bei Bedarf selbst auf (steht so in den Skills).
+Der Hook wirkt in Sessions, sobald `.claude/settings.json` auf dem Standard-Branch des Repos liegt (nach dem Merge). Abschalten: den `hooks`-Block aus der `settings.json` löschen. Claude ruft die Skripte dann bei Bedarf selbst auf (steht so in den Skills).
 
 ## Craft Anything – Hinweise
 
