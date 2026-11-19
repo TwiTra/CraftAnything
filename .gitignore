@@ -1,0 +1,31 @@
+# Gradle / Android
+.gradle/
+build/
+local.properties
+*.iml
+.idea/
+.cxx/
+captures/
+*.apk
+*.aab
+*.keystore
+*.jks
+keystore.properties
+
+# Fremde Projekte (clone-app.sh) – nicht ins eigene Repo übernehmen
+clones/
+
+# Von Craft Anything erzeugte Arbeitsordner
+.craft-anything/
+*.cany/
+
+# Offizielle Google-Skills: werden vom SessionStart-Hook geholt (scripts/android-skills.sh)
+.claude/skills/*
+!.claude/skills/android-app-dev/
+!.claude/skills/android-app-clone/
+!.claude/skills/android-release/
+!.claude/skills/craft-anything/
+
+# Allgemein
+.DS_Store
+*.log
